@@ -1,2 +1,0 @@
-const e={email:"",message:""},a=document.querySelector(".feedback-form"),s="form-state",l=localStorage.getItem(s);l&&(Object.assign(e,JSON.parse(l)),a.elements.email.value=e.email,a.elements.message.value=e.message);a.addEventListener("input",t=>{e[t.target.name]=t.target.value.trim(),localStorage.setItem(s,JSON.stringify(e))});a.addEventListener("submit",t=>{if(t.preventDefault(),!e.email||!e.message){alert("Please fill in all fileds!");return}localStorage.removeItem(s),e.email="",e.message="",a.reset()});
-//# sourceMappingURL=2-form-BH4wNhky.js.map
