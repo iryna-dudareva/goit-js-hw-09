@@ -10,6 +10,9 @@ export default defineConfig(({ command }) => {
       [command === 'serve' ? 'global' : '_global']: {},
     },
     root: 'src',
+    optimizeDeps: {
+      include: ['simplelightbox'], // Add this line to include SimpleLightbox
+    },
     build: {
       sourcemap: true,
       rollupOptions: {
